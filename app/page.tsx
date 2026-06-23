@@ -1,16 +1,41 @@
 
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
+import { Progress } from "@/components/ui/progress";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function Home() {
   return (
     
+  <div className="p-4">
+  
+  <div className="flex flex-col gap-y-4">
+
   <div>
+  <Button variant="elevated">I am a button</Button>
+  </div>
 
-  <p className="text-4xl text-red-500 font-bold">hello world</p>
+  <div>
+  <Input placeholder="I am an input"/>
+  </div>
 
-  <Button variant="isra">Welcome</Button>
+  <div>
+  <Progress value={50}/>
+  </div>
+
+  <div>
+  <Textarea value="I am a textarea"/>
+  </div>
+
+  <div>
+  <Checkbox/>
+  </div>
 
   </div>
+
+  </div>
+
    
   );
 }
