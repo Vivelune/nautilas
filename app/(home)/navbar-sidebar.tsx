@@ -1,6 +1,7 @@
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import Link from "next/link"
+import { Children } from "react"
 
 
 interface NavbarItem{
@@ -32,6 +33,8 @@ return(
                        {item.children}
                     </Link>
                 ))}
+                     
+                
 
                 <div className="border-t">
                    <Link onClick={()=>onOpenChange(false)} href="/sign-in" className="flex w-full text-left p-4 hover:bg-black hover:text-white item-center text-base font-medium">Log In</Link>

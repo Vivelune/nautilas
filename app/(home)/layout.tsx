@@ -1,3 +1,4 @@
+import Footer from "./footer"
 import Navbar from "./navbar"
 
 interface Props{
@@ -14,7 +15,10 @@ const Layout = ({children}:Props)=> {
            
 
            <Navbar/>
-            {children}
+            <div className=" flex-1 bg-[#f4f4f0]">
+                {children}
+            </div>
+           <Footer/>
         </div>
     )
 }
