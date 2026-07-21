@@ -1,5 +1,7 @@
 import Footer from "./footer"
 import Navbar from "./navbar"
+import SearchFilters from "./search-filters"
+
 
 interface Props{
 
@@ -7,19 +9,25 @@ interface Props{
 }
 
 
-const Layout = ({children}:Props)=> {
+const Layout = async ({children}:Props)=> {
+
+    
 
     return(
+        
 
         <div className="flex flex-col min-h-screen">
            
 
            <Navbar/>
+           <SearchFilters/>
             <div className=" flex-1 bg-[#f4f4f0]">
                 {children}
             </div>
            <Footer/>
         </div>
+
+        
     )
 }
 

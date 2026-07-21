@@ -3,19 +3,29 @@ import configPromise from '@payload-config'
 
 export default async function Home()
 {
-    const payload = await getPayload({
-        config: configPromise
-    })
 
-    const data = await payload.find({
-        collection:"categories"
-    })
-
-
+     const payload = await getPayload({
+            config: configPromise
+        })
+    
+        const data = await payload.find({
+            collection:"categories",
+            where:{
+                parent:{
+                    exists:false
+                }
+            },
+        })
+    
     return(
 
         <div>
-           {JSON.stringify(data)}
+           home
+                 <div>
+                 {JSON.stringify(data)}
+                </div>
+
         </div>
+        
     )
 }
