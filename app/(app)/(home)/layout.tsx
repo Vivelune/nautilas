@@ -2,6 +2,7 @@ import Footer from "./footer"
 import Navbar from "./navbar"
 import SearchFilters from "./search-filters"
 
+
 interface Props{
 
     children: React.ReactNode
@@ -13,6 +14,7 @@ const Layout = async ({children}:Props)=> {
     
 
     return(
+        
 
         <div className="flex flex-col min-h-screen">
            
@@ -24,6 +26,8 @@ const Layout = async ({children}:Props)=> {
             </div>
            <Footer/>
         </div>
+
+        
     )
 }
 
